@@ -1,7 +1,17 @@
 :root {
-  --clr-neutral-white: #ffffff;
+  --clr-white-hsl: 0, 0%, 100%;
+  --clr-dark-blue-hsl: 240, 67%, 8%;
+  --clr-off-grey-hsl: 240, 17%, 26%;
+  --clr-grey-hsl: 240, 6%, 54%;
+  --clr-light-blue-hsl: 194, 48%, 49%;
+  --clr-yellow-hsl: 33, 82%, 61%;
+  --clr-purple-hsl: 263, 67%, 51%;
+  --clr-bright-red-hsl: 10, 63%, 51%;
+  --clr-dull-red-hsl: 2, 68%, 53%;
+  --clr-orange-hsl: 17, 73%, 46%;
+  --clr-teal-hsl: 169, 73%, 44%;
+  --clr-blue-hsl: 222, 87%, 56%;
 }
-
 
 *,
 *::before,
@@ -22,9 +32,10 @@ body {
 body {
   background: url("/assets/background-stars.svg"), #070724;
   background-size: cover;
-  color: var(--clr-neutral-white);
+  color: hsl(var(--clr-white-hsl));
+  line-height: 1.5625rem;
+  font-size: 0.875rem;
 }
-
 
 ul,
 ol {
@@ -38,23 +49,7 @@ svg {
   height: auto;
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */
