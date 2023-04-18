@@ -5,7 +5,8 @@
 }
 
 .categories {
-  width: 21.4%;
+  width: 76.5%;
+  margin-top: 1rem;
 
 }
 
@@ -18,7 +19,7 @@
   font-weight: 700;
   background: none;
   color: var(--clr-white-hsl);
-  padding: 0.916em 0 1em;
+  padding: 1em 0 0.916em ;
   border: 1px solid hsl(var(--clr-white-hsl, 0.2));
   cursor: pointer;
 }
@@ -26,6 +27,7 @@
 .listItem p {
   display: inline;
   margin-left: 2.333em;
+  line-height: 1.5625rem;
 }
 
 .listItem p:first-of-type {
