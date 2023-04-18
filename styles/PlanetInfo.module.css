@@ -1,0 +1,50 @@
+.planetContainer {
+  padding: 7.875rem 10.3125rem 3.5rem;
+}
+.gridColumn {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "image info"
+    "features features";
+  row-gap: 5.4375rem;
+}
+
+.image {
+  grid-area: image;
+}
+
+.planetInfo {
+  grid-area: info;
+}
+
+.features {
+  grid-area: features;
+  display: flex;
+  gap: 1.875rem;
+}
+
+.featuresElement {
+  text-transform: uppercase;
+  padding: 1.25rem 6.5rem 1.6875rem 1.4375rem;
+  border: 1px solid hsl(var(--clr-white-hsl), 0.2);
+  min-width: 25%;
+}
+
+.featuresTitle {
+  letter-spacing: 1px;
+  font-size: 0.6875rem;
+  font-family: var(--spartan-font);
+  font-weight: 700;
+  color: hsl(var(--clr-white-hsl), 0.5);
+}
+
+.featuresData {
+  font-weight: 400;
+  font-family: var(--antonio-font);
+  font-size: 2.5rem;
+  line-height: 1.3em;
+  letter-spacing: -1.5px;
+}
