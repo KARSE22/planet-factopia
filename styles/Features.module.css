@@ -1,0 +1,32 @@
+.features {
+  grid-area: features;
+  justify-content: center;
+  display: flex;
+  /* justify-content: space-between; */
+  column-gap: 1.875rem;
+  width: 100%;
+}
+
+.featuresElement {
+  /* flex: 1; */
+  text-transform: uppercase;
+  padding: 1.25rem 5.4rem 1.6875rem 1.4375rem;
+  border: 1px solid hsl(var(--clr-white-hsl), 0.2);
+  min-width: 25%;
+}
+
+.featuresTitle {
+  letter-spacing: 1px;
+  font-size: 0.6875rem;
+  font-family: var(--spartan-font);
+  font-weight: 700;
+  color: hsl(var(--clr-white-hsl), 0.5);
+}
+
+.featuresData {
+  font-weight: 400;
+  font-family: var(--antonio-font);
+  font-size: 2.5rem;
+  line-height: 1.3em;
+  letter-spacing: -1.5px;
+}
