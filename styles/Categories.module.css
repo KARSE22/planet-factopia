@@ -1,0 +1,44 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.categories {
+  width: 21.4%;
+
+}
+
+.listItem {
+  display: flex;
+  font-family: var(--spartan-font);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.2144em;
+  font-weight: 700;
+  background: none;
+  color: var(--clr-white-hsl);
+  padding: 0.916em 0 1em;
+  border: 1px solid hsl(var(--clr-white-hsl, 0.2));
+  cursor: pointer;
+}
+
+.listItem p {
+  display: inline;
+  margin-left: 2.333em;
+}
+
+.listItem p:first-of-type {
+  color: hsl(var(--clr-white-hsl), 0.5);
+}
+
+.listItem:hover {
+  border: 1px solid #D8D8D800;
+  background-color: #D8D8D820;
+}
+
+.listItem:active {
+  border: 1px solid hsl(var(--clr-light-blue-hsl));
+  background-color: hsl(var(--clr-light-blue-hsl));
+}
+
