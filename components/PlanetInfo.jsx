@@ -5,7 +5,7 @@ import Features from './Features';
 import styles from "@/styles/PlanetInfo.module.css";
 
 export default function PlanetInfo({ planet }) {
-  const { overview, images, name } = planet[0];
+  const { overview, images, name, color } = planet[0];
   const [text, setText] = useState(overview.content);
   const [sourceURL, setSourceURL] = useState(overview.source);
   const [imageURL, setImageURL] = useState(images.planet);
@@ -68,6 +68,7 @@ export default function PlanetInfo({ planet }) {
             setSourceURL={setSourceURL}
             setImageURL={setImageURL}
             setShowGeology={setShowGeology}
+            color={color}
           />
         </section>
         <Features features={features}/>

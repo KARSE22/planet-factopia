@@ -1,6 +1,11 @@
 import styles from "@/styles/Categories.module.css";
+import { useEffect } from 'react';
 
-export default function Category({ number, title, planet, setText, setSourceURL, setImageURL, setShowGeology }) {
+export default function Category({ number, title, planet, setText, setSourceURL, setImageURL, setShowGeology, color }) {
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--button-color', color)
+  }, [color])
 
   function update(text, sourceURL, imageURL) {
     setText(text);

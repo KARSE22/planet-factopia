@@ -11,6 +11,7 @@
   --clr-orange-hsl: 17, 73%, 46%;
   --clr-teal-hsl: 169, 73%, 44%;
   --clr-blue-hsl: 222, 87%, 56%;
+  --button-color: hsl(var(--clr-light-blue-hsl))
 }
 
 *,

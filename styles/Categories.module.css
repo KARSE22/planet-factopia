@@ -39,8 +39,8 @@
   background-color: #D8D8D820;
 }
 
-.listItem:active {
+.listItem:active, .listItem:focus {
   border: 1px solid hsl(var(--clr-light-blue-hsl));
-  background-color: hsl(var(--clr-light-blue-hsl));
+  background-color: var(--button-color);
 }
 
