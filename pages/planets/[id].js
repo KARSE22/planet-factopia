@@ -1,9 +1,9 @@
 import PlanetInfo from "../../components/PlanetInfo";
-// import useSWR from "swr";
+import fetch from "node-fetch";
 
 export async function getStaticPaths() {
-  const res = await fetch("/api/staticdata");
-  const planets = await res.json();
+  const res = await fetch("http://localhost:3000/api/staticdata");
+  let planets = await res.json();
 
   const paths = planets.map((planet) => ({
     params: { id: planet.name.toLowerCase() },
@@ -13,12 +13,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch("/api/staticdata");
+  const res = await fetch("http://localhost:3000/api/staticdata");
   const planets = await res.json();
 
-  const planet = planets.filter(
-    (planet) => params.id === planet.name.toLowerCase
-  );
+  const planet = planets.filter((planet) => {
+    return params.id === planet.name.toLowerCase();
+  });
+
   return {
     props: {
       planet,
