@@ -18,7 +18,7 @@ export default function PlanetInfo({ planet }) {
     fetchImg()
   }, [imageURL, name]);
 
-  //update state when navigating to a new page, reset to static data
+  //update state when navigating to a new pag via navbar, reset to static data
   useEffect(() => {
     setText(overview.content);
     setSourceURL(overview.source);

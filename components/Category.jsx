@@ -2,21 +2,20 @@ import styles from "@/styles/Categories.module.css";
 
 export default function Category({ number, title, planet, setText, setSourceURL, setImageURL }) {
 
+  function update(text, sourceURL, imageURL) {
+    setText(text);
+    setSourceURL(sourceURL);
+    setImageURL(imageURL);
+  }
+
   let handleClick = (e) => {
     if (title === 'overview') {
-      setText(planet.overview.content);
-      setSourceURL(planet.overview.source);
-      setImageURL(planet.images.planet);
+      update(planet.overview.content, planet.overview.source, planet.images.planet)
     } else if (title === 'internal structure') {
-      setText(planet.structure.content);
-      setSourceURL(planet.structure.source);
-      setImageURL(planet.images.internal);
+      update(planet.structure.content, planet.structure.source, planet.images.internal)
     } else {
-      setText(planet.geology.content);
-      setSourceURL(planet.geology.source);
-      setImageURL(planet.images.geology);
+      update(planet.geology.content, planet.geology.source, planet.images.geology)
     }
-
   };
 
   return (
