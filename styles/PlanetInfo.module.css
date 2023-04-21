@@ -23,6 +23,15 @@
 
 .image {
   grid-area: image;
+  position: relative;
+}
+
+.geology {
+  position: absolute;
+  /* top: 74%;
+  right: 29.5%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 

@@ -1,6 +1,6 @@
 import styles from "@/styles/Categories.module.css";
 
-export default function Category({ number, title, planet, setText, setSourceURL, setImageURL }) {
+export default function Category({ number, title, planet, setText, setSourceURL, setImageURL, setShowGeology }) {
 
   function update(text, sourceURL, imageURL) {
     setText(text);
@@ -10,11 +10,14 @@ export default function Category({ number, title, planet, setText, setSourceURL,
 
   let handleClick = (e) => {
     if (title === 'overview') {
-      update(planet.overview.content, planet.overview.source, planet.images.planet)
+      update(planet.overview.content, planet.overview.source, planet.images.planet);
+      setShowGeology(false);
     } else if (title === 'internal structure') {
-      update(planet.structure.content, planet.structure.source, planet.images.internal)
+      update(planet.structure.content, planet.structure.source, planet.images.internal);
+      setShowGeology(false);
     } else {
-      update(planet.geology.content, planet.geology.source, planet.images.geology)
+      update(planet.geology.content, planet.geology.source, planet.images.planet);
+      setShowGeology(true);
     }
   };
 

@@ -10,19 +10,22 @@ export default function PlanetInfo({ planet }) {
   const [sourceURL, setSourceURL] = useState(overview.source);
   const [imageURL, setImageURL] = useState(images.planet);
   const [finalImg, setFinalImg] = useState('');
+  const [showGeology, setShowGeology] = useState(false);
 
+  //Dynamically import the correct image to automatically set img height and width
   useEffect(() => {
     async function fetchImg() {
       setFinalImg((await import(`../public${imageURL}`))?.default ?? '');
     }
     fetchImg()
-  }, [imageURL, name]);
+  }, [imageURL]);
 
   //update state when navigating to a new pag via navbar, reset to static data
   useEffect(() => {
     setText(overview.content);
     setSourceURL(overview.source);
     setImageURL(images.planet);
+    setShowGeology(false);
 
   }, [overview.content, overview.source, images.planet])
 
@@ -41,6 +44,14 @@ export default function PlanetInfo({ planet }) {
             alt={`Picture of ${name}`}
             priority
         />)}
+        {showGeology && (<Image
+            src={images.geology}
+            width={163}
+            height={199}
+            alt={`Picture of ${name} geology`}
+            className={styles.geology}
+            priority
+        />)}
         </div>
         <section className={styles.planetInfo}>
           <h2 className={styles.planetName}>{name}</h2>
@@ -56,6 +67,7 @@ export default function PlanetInfo({ planet }) {
             setText={setText}
             setSourceURL={setSourceURL}
             setImageURL={setImageURL}
+            setShowGeology={setShowGeology}
           />
         </section>
         <Features features={features}/>
