@@ -23,6 +23,11 @@
 
 .image {
   grid-area: image;
+  /* display: relative; */
+}
+
+.planetImg {
+  /* object-fit: contain; */
 }
 
 .planetInfo {

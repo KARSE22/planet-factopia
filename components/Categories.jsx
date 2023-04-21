@@ -1,7 +1,7 @@
 import Category from './Category';
 import styles from "@/styles/Categories.module.css";
 
-export default function Categories({ planet, setText, setSourceURL }) {
+export default function Categories({ planet, setText, setSourceURL, setImageURL }) {
   const categories = [{name: 'overview', number:'01'}, {name: 'internal structure', number:'02'}, {name: 'surface geology', number:'03'}]
   return (
     <div className={`${styles.flex} ${styles.categories}` }>
@@ -13,6 +13,7 @@ export default function Categories({ planet, setText, setSourceURL }) {
         planet={planet}
         setText={setText}
         setSourceURL={setSourceURL}
+        setImageURL={setImageURL}
         />
       )}
     </div>
