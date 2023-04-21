@@ -14,7 +14,7 @@
   grid-template-areas:
     "image info"
     "features features";
-  row-gap: 5.4375rem;
+  row-gap: 5.5rem;
   margin: 7.875rem 6rem 3.5rem;
   /* margin: 7.875rem 10.3125rem 3.5rem; */
   /* overflow: hidden; */
@@ -28,10 +28,8 @@
 
 .geology {
   position: absolute;
-  /* top: 74%;
-  right: 29.5%; */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
 }
 
 
