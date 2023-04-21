@@ -1,7 +1,6 @@
 import styles from "@/styles/Features.module.css";
 
 export default function Feature({title, data }) {
-  console.log(title);
 
   return (
     <div className={styles.featuresElement}>

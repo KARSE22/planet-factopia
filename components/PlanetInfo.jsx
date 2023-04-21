@@ -16,7 +16,15 @@ export default function PlanetInfo({ planet }) {
       setFinalImg((await import(`../public${imageURL}`))?.default ?? '');
     }
     fetchImg()
-  }, [imageURL])
+  }, [imageURL, name]);
+
+  //update state when navigating to a new page, reset to static data
+  useEffect(() => {
+    setText(overview.content);
+    setSourceURL(overview.source);
+    setImageURL(images.planet);
+
+  }, [overview.content, overview.source, images.planet])
 
   const features = Object.entries(planet[0]).filter((pair) =>  {
     return typeof pair[1] === 'string' && pair[0] !== 'name'
@@ -27,7 +35,7 @@ export default function PlanetInfo({ planet }) {
       <div className={`${styles.gridColumn} ${styles.center}`}>
         <div className={styles.image}>
         {finalImg && (<Image
-            src={imageURL}
+            src={finalImg.src}
             width={finalImg.width}
             height={finalImg.height}
             alt={`Picture of ${name}`}
