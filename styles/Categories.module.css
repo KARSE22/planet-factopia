@@ -40,7 +40,7 @@
 }
 
 .listItem:active, .listItem:focus {
-  border: 1px solid hsl(var(--clr-light-blue-hsl));
+  border: 1px solid var(--button-color);
   background-color: var(--button-color);
 }
 
