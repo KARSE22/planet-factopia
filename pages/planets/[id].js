@@ -1,4 +1,5 @@
 import PlanetInfo from "../../components/PlanetInfo";
+import DynamicHead from "../../components/DyanimcHead.jsx";
 import fetch from "node-fetch";
 
 export async function getStaticPaths() {
@@ -28,5 +29,10 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Planet({ planet }) {
-  return <PlanetInfo planet={planet} />;
+  return (
+    <>
+      <DynamicHead name={planet[0].name} />
+      <PlanetInfo planet={planet} />
+    </>
+  );
 }

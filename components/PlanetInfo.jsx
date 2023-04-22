@@ -30,7 +30,7 @@ export default function PlanetInfo({ planet }) {
   }, [overview.content, overview.source, images.planet])
 
   const features = Object.entries(planet[0]).filter((pair) =>  {
-    return typeof pair[1] === 'string' && pair[0] !== 'name'
+    return typeof pair[1] === 'string' && pair[0] !== 'name' && pair[0] !== 'color'
   });
 
   return (

@@ -2,7 +2,6 @@
   grid-area: features;
   justify-content: center;
   display: flex;
-  /* justify-content: space-between; */
   column-gap: 1.875rem;
   width: 100%;
 }
